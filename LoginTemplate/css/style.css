@@ -112,6 +112,14 @@ table {
 
 /**Comment CSS style for the page**/
 
+body {
+    font-family: sans-serif;
+}
+
+ul {
+    list-style: none;
+}
+
 h1 {
     font-size: 36px;
 }
@@ -157,9 +165,47 @@ h6 {
     color: white;
 }
 
-.verify-img img {
-    width: 100px;
+.loginmain ul li {
+    margin-top: 20px;
+}
+
+.loginmain ul li span {
+    display: inline-block;
+    width: 120px;
+    height: 30px;
+    text-align: right;
+    font-size: 14px;
+}
+
+.loginmain ul li input[type="text"],
+.loginmain ul li input[type="password"] {
+    width: 250px;
+    height: 30px;
+    padding: 0 5px 0 5px;
+}
+
+.loginmain .verify-img img {
+    width: 260px;
     height: 40px;
+    margin-left: 120px;
+    background: #00cbff;
+}
+
+.loginmain ul li input[type="button"] {
+    width: 80px;
+    height: 34px;
+    border: none;
+    background: #00497d;
+    color: #fff;
+    font-size: 14px;
+    margin-left: 130px;
+    cursor: pointer;
+    vertical-align: middle;
+    float: left;
+}
+
+.loginmain ul li input[type="button"]:hover {
+    background: #015997;
 }
 
 
