@@ -1,4 +1,4 @@
-/**CSS Reset **/
+/**CSS Reset 
 
 html,
 body,
@@ -107,7 +107,7 @@ table {
 }
 
 
-/**CSS Reset**/
+CSS Reset**/
 
 
 /**Comment CSS style for the page**/
@@ -150,7 +150,7 @@ h6 {
 
 /** Login **/
 
-.login {
+#login {
     width: 500px;
     height: 360px;
     background: #00cbff;
@@ -158,6 +158,10 @@ h6 {
     top: 50%;
     left: 50%;
     margin: -170px 0 0 -250px;
+}
+
+#login .row col-8 {
+    padding-right: 200px;
 }
 
 .loginmain {

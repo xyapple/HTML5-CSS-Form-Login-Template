@@ -15,43 +15,55 @@
 </head>
 
 <body>
-    <div class="login">
+    <div class="container">
         <div class="loginmain">
-
-            <h2>Login Control</h2>
-
-            <form action="/" method="get">
-                <ul>
-                    <li>
-                        <span>Admin username:</span>
-                        <input type="text" name="username" value="">
-                    </li>
-                    <li>
-                        <span>Admin password:</span>
-                        <input type="password" name="password" value="">
-                    </li>
-                    <li>
-                        <span>CAPTCHA</span>
-                        <input type="text" name="verify" value="">
-                    </li>
-                    <li>
-                        <div class="verify-img">
-                            <img src="img/verifyimg.png" alt="please enter verify info">
+            <div class="row">
+                <div id="login" class="col-md-6 col-md-offset-3">
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <a href="#" class="active" id="signup-form-link"> Sign Up</a>
                         </div>
-                    </li>
-                    <li>
-                        <input type="button" value="Login"></button>
-                    </li>
-                </ul>
+                        <div class="col-xs-6">
+                            <a href="#" class="active" id="login-form-link">Log In</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form" action="/ " method="get">
+                    <ul>
+                        <li>
+                            <span>Admin username:</span>
+                            <input type="text " name="username " value=" ">
+                        </li>
+                        <li>
+                            <span>Admin password:</span>
+                            <input type="password " name="password " value=" ">
+                        </li>
+                        <li>
+                            <span>CAPTCHA</span>
+                            <input type="text " name="verify " value=" ">
+                        </li>
+                        <li>
+                            <div class="verify-img ">
+                                <img src="img/verifyimg.png " alt="please enter verify info ">
+                            </div>
+                        </li>
+                        <li>
+                            <input type="button " value="Login "></button>
+                        </li>
+                    </ul>
 
-            </form>
+                </div>
+            </div>
         </div>
-
     </div>
+    </div>
+    <script src="js/jquery-3.2.1.min.js "></script>
     <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="js/jquery-3.2.1.min.js"></script>
-    <script src="js/login.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js "></script>
+
+    <script src="js/login.js "></script>
 </body>
 
 </html>
