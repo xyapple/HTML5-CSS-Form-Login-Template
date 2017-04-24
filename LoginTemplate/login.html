@@ -18,44 +18,69 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6 col-md-offset-3">
-                <div class="heading">
-                    <div class="row">
-                        <div class="col-xs-6">Log In</div>
-                        <div class="col-xs-6">Sign Up</div>
+                <div class="login-page">
+                    <div class="heading">
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <a href="#" class="active" id="login-form-link">Log In</a>
+                            </div>
+                            <div class="col-xs-6">
+                                <a href="#" class="active" id="signup-form-link">Sign Up</a>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <hr>
+                    <hr>
 
-                <form id="login-form" action="/" method="post" role="form" style="display: block;">
-                    <h1>Welcome, please Log in</h1>
-                    <div class="form-group row">
-                        <label for="InputEmail" class="col-sm-4 col-form-label col-form-label-lg">Email address</label>
-                        <div class="col-sm-8">
-                            <input type="email" class="form-control col-form-label-lg" id="inputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-                            <small id="emailHelp" class="form-text text-muted">Your privacy is important to us.</small>
+                    <form id="login-form" action="/" method="post" role="form" style="display: block;">
+                        <h1>Welcome, please Log in</h1>
+
+                        <div class="form-group">
+                            <label for="InputEmail" class="col-sm-4">Username</label>
+                            <div class="col-sm-8">
+                                <input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" value="">
+                            </div>
                         </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="InputPassword1" class="col-sm-4 col-form-label col-form-label-lg">Password</label>
-                        <div class="col-sm-8">
-                            <input type="password" class="form-control col-form-label-lg" id="inputPassword1" placeholder="Password">
-                            <small id="passwordHelp" class="form-text text-muted">Forget your password?</small>
+                        <div class="form-group">
+                            <label for="InputEmail" class="col-sm-4 ">Email address</label>
+                            <div class="col-sm-8">
+                                <input type="email" class="form-control " id="inputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                                <!--<small id="emailHelp" class="form-text text-muted">Your privacy is important to us.</small>-->
+                            </div>
                         </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleSelect1">reCAPTCHA</label>
-                    </div>
-                    <div class="form-check mb-2 mr-sm-2 mb-sm-0">
-                        <label class="form-check-label">
-                        <input class="form-check-input" type="checkbox"> Remember me
-                         </label>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Login</button>
+                        <div class="form-group">
+                            <label for="InputPassword1" class="col-sm-4 col-form-label ">Password</label>
+                            <div class="col-sm-8">
+                                <input type="password" class="form-control " id="inputPassword1" placeholder="Password">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleSelect1" class="col-sm-4 ">reCAPTCHA</label>
+                        </div>
+                        <div class="form-group text-center">
+                            <input type="checkbox" tabindex="3" class="" name="remember" id="remember">
+                            <label for="remember"> Remember Me</label>
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-sm-6 col-sm-offset-3">
+                                    <input type="submit" name="login-submit" id="login-submit" tabindex="4" class="form-control btn btn-login" value="Log In">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="text-center">
+                                        <a href="http://phpoll.com/recover" tabindex="5" class="forgot-password">Forgot Password?</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                </div>
                 </form>
 
                 <form id="signup-form" action="/" method="get" role="form" style="display: block;">
                     <h1>Welcome, please Sign in</h1>
-
                     <form class="form-inline">
                         <div class="row">
                             <div class="col-xs-6 col-sm-6 col-md-6">
@@ -67,16 +92,11 @@
                                 <input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0" id="inlineFormInput" placeholder="Last Name">
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-xs-12 col-sm-12 col-md-12">
-                                <label class="sr-only" for="inlineFormInputGroup">Username</label>
-                                <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Username">
-                            </div>
-                        </div>
+
                         <div class="row">
                             <div class="col-xs-6 col-sm-6 col-md-6">
-                                <label class="sr-only" for="inlineFormInputGroup">Email Address</label>
-                                <input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0" id="inlineFormInput" placeholder="Email Address">
+                                <label class="sr-only" for="inlineFormInputGroup">Username</label>
+                                <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Username">
                             </div>
                             <div class="col-xs-6 col-sm-6 col-md-6">
                                 <label class="sr-only" for="inlineFormInputGroup">Email Address</label>
@@ -96,11 +116,16 @@
                             </div>
                         </div>
 
-
-
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-sm-6 col-sm-offset-3">
+                                    <input type="submit" name="register-submit" id="register-submit" tabindex="4" class="form-control btn btn-register" value="Register Now">
+                                </div>
+                            </div>
+                        </div>
                     </form>
             </div>
+
         </div>
     </div>
     <script src="js/jquery-3.2.1.min.js "></script>
