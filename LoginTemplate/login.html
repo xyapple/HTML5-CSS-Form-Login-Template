@@ -49,13 +49,14 @@
                                         <label class="col-sm-4 ">Email address</label>
                                         <div class="col-sm-8">
                                             <input type="email" class="form-control " id="loginemail" placeholder="Enter email">
-                                            <!--<small id="emailHelp" class="form-text text-muted"> aria-describedby="emailHelp"Your privacy is important to us.</small>-->
+
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label class="col-sm-4 col-form-label ">Password</label>
                                         <div class="col-sm-8">
-                                            <input type="password" class="form-control " id="inputPassword1" placeholder="Password">
+                                            <input type="password" class="form-control " id="inputPassword1" aria-describedby="passwordHelp" placeholder="Password">
+                                            <small id="passwordHelp" class="form-text text-muted"> Password must have at least 8 letters long with 1 number.</small>
                                         </div>
                                     </div>
                                     <div class="form-group">
@@ -115,6 +116,7 @@
                                         <label class="col-sm-4 col-form-label">Email Address</label>
                                         <div class="col-sm-8">
                                             <input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0" id="registeremail" placeholder="Email Address">
+
                                         </div>
                                     </div>
 
@@ -122,7 +124,8 @@
                                     <div class="form-group">
                                         <label class="col-sm-4 col-form-label">Enter Password</label>
                                         <div class="col-sm-8">
-                                            <input type="password" name="password" id="registerpassword" class="form-control input-sm" placeholder="Password">
+                                            <input type="password" name="password" id="registerpassword" aria-describedby="passwordHelp" class="form-control input-sm" placeholder="Password">
+                                            <small id="passwordHelp" class="form-text text-muted"> Password must have at least 8 letters long with 1 number.</small>
                                         </div>
                                     </div>
 
@@ -133,11 +136,10 @@
                                         </div>
                                     </div>
 
-
                                     <div class="form-group">
                                         <div class="row">
                                             <div class="col-sm-6 col-sm-offset-3">
-                                                <input type="submit" name="register-submit" id="register-submit" tabindex="4" class="form-control btn btn-register" value="Register Now">
+                                                <input type="submit" name="register-submit" id="register-submit" tabindex="4" class="form-control btn btn-register" value="Sign Up">
                                             </div>
                                         </div>
                                     </div>
@@ -154,7 +156,8 @@
     <script src="js/jquery-3.2.1.min.js "></script>
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js "></script>
-
+    <!--form validation
+    <script src=https://cdn.jsdelivr.net/jquery.validation/1.15.1/jquery.validate.min.js></script>-->
     <script src="js/login.js "></script>
 </body>
 
