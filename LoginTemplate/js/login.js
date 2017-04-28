@@ -4,15 +4,35 @@ $(document).ready(function() {
     $('#signup-form').hide();
     //Login function
     $('#login-submit').click(function() {
-        var email = new RegExp(/^[+a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/i);
+        var $name = $('input[name="username"]');
+        var $password = $('input[name="passwordHelp"]');
+        var $email = $('input[name="loginemail"]');
+        var $text = $('#text');
+        var _name = $.trim($name.val());
+        var _password = $.trim($password.val());
+        var _email = $.trim($email.val());
+        var emailV = new RegExp(/^[+a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/i);
+        if ('' == _name) {
+            $text.text('Please enter a username');
+            $name.focus();
+            return;
+        }
+        if ('' == _password) {
+            $text.text('Please enter a password');
+            $password.focus();
+            return;
+        }
         if ($("#loginemail").val() == '' || $("#loginpassword").val() == '') {
-            alert("Please fill all fields...!!!!!!");
+            $text.text("Please fill all fields...!!!!!!");
+            $email.focus();
+            return;
         } else if (!($("#loginemail").val()).match(email)) {
-            alert("Please enter valid Email...!!!!!!");
+            $text.text("Please enter valid Email...!!!!!!");
         } else {
-            alert("You have successfully Logged in...!!!!!!");
+            $text.text("You have successfully Logged in...!!!!!!");
 
         }
+        $text.text('Success！');
         $('#login-submit').reset();
 
     });
@@ -54,42 +74,6 @@ $(document).ready(function() {
         $(this).addClass('active');
         e.preventDefault();
     });
-    // $("form[name='registration']").validate({
-    //     // Specify validation rules
-    //     rules: {
-    //         // The key name on the left side is the name attribute
-    //         // of an input field. Validation rules are defined
-    //         // on the right side
-    //         fist: "required",
-    //         last: "required",
-    //         username: "required",
-    //         registeremail: {
-    //             required: true,
-    //             // Specify that email should be validated
-    //             // by the built-in "email" rule
-    //             email: true
-    //         },
-    //         registerpassword: {
-    //             required: true,
-    //             minlength: 8
-    //         }
-    //     },
-    //     // Specify validation error messages
-    //     messages: {
-    //         firstname: "Please enter your firstname",
-    //         lastname: "Please enter your lastname",
-    //         username: "Please enter your username",
-    //         password: {
-    //             required: "Please provide a password",
-    //             minlength: "Your password must be at least 8 characters long"
-    //         },
-    //         email: "Please enter a valid email address"
-    //     },
-    //     // Make sure the form is submitted to the destination defined
-    //     // in the "action" attribute of the form when valid
-    //     submitHandler: function(form) {
-    //         form.submit();
-    //     }
 
 
 });
